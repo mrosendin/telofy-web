@@ -100,9 +100,40 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right column - Mock UI Card */}
-            <div className="opacity-0 animate-fade-in-up animation-delay-400">
-              <div className="rounded-2xl bg-telofy-surface border border-telofy-border p-6 glow">
+            {/* Right column - Mock UI Cards with notifications */}
+            <div className="relative opacity-0 animate-fade-in-up animation-delay-400">
+              {/* Floating notification - top right */}
+              <div className="absolute -top-4 -right-4 z-20 opacity-0 animate-fade-in-up animation-delay-500">
+                <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-telofy-surface border border-telofy-border shadow-xl">
+                  <div className="w-8 h-8 rounded-full bg-telofy-accent/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-telofy-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-telofy-text-secondary">Just completed</p>
+                    <p className="text-sm font-medium">Morning workout</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Background card - Fitness objective */}
+              <div className="absolute top-6 left-6 right-0 rounded-2xl bg-telofy-surface/60 border border-telofy-border p-6 opacity-60">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-orange-500/20 flex items-center justify-center">
+                    <svg className="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-telofy-text-secondary tracking-wide">FITNESS</p>
+                    <p className="font-semibold">Lose 15 lbs by Summer</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Main card - Career objective */}
+              <div className="relative z-10 rounded-2xl bg-telofy-surface border border-telofy-border p-6 glow">
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center">
@@ -140,6 +171,21 @@ export default function HomePage() {
                   </div>
                   <div className="h-2 bg-telofy-bg rounded-full overflow-hidden">
                     <div className="h-full w-2/3 bg-telofy-accent rounded-full" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Floating notification - bottom left */}
+              <div className="absolute -bottom-4 -left-4 z-20 opacity-0 animate-fade-in-up animation-delay-600">
+                <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-telofy-surface border border-amber-500/30 shadow-xl">
+                  <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
+                    <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-xs text-amber-400">In 30 minutes</p>
+                    <p className="text-sm font-medium">Review PR feedback</p>
                   </div>
                 </div>
               </div>
