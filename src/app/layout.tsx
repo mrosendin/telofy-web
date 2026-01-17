@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   description:
     'The AI execution system that transforms your objectives into completed days. Define your goal. Let Telofy handle the execution.',
   keywords: ['productivity', 'goal tracking', 'AI', 'habits', 'execution', 'accountability'],
-  metadataBase: new URL('https://telofy.com'),
+  metadataBase: new URL('https://telofy.ai'),
   openGraph: {
     title: 'Telofy — Turn Intention Into Execution',
     description: 'The AI execution system that transforms your objectives into completed days. Define your goal. Let Telofy handle the execution.',

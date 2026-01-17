@@ -85,3 +85,95 @@ html {
 .animation-delay-500 { animation-delay: 0.5s; }
 .animation-delay-600 { animation-delay: 0.6s; }
 .animation-delay-700 { animation-delay: 0.7s; }
+
+/* iPhone Frame CSS */
+.iphone-frame {
+  position: relative;
+  width: 280px;
+  height: 580px;
+  background: linear-gradient(135deg, #2a2a2e 0%, #1a1a1e 50%, #0f0f12 100%);
+  border-radius: 48px;
+  padding: 12px;
+  box-shadow: 
+    0 0 0 2px #3a3a40,
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.iphone-frame::before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: #1a1a1e;
+  border-radius: 2px;
+  z-index: 20;
+}
+
+.iphone-notch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 32px;
+  background: #0f0f12;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.iphone-notch::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background: #1a1a1e;
+  border-radius: 3px;
+}
+
+.iphone-notch::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  background: #2a2a30;
+  border-radius: 50%;
+}
+
+.iphone-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--color-telofy-bg);
+  border-radius: 36px;
+  overflow: hidden;
+}
+
+.iphone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Hover effect for phones */
+.iphone-frame {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iphone-frame:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 0 0 2px #3a3a40,
+    0 35px 60px -15px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(34, 197, 94, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
