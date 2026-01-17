@@ -101,9 +101,9 @@ export default function HomePage() {
             </div>
 
             {/* Right column - Mock UI Cards with notifications */}
-            <div className="relative opacity-0 animate-fade-in-up animation-delay-400">
+            <div className="relative">
               {/* Floating notification - top right */}
-              <div className="absolute -top-4 -right-4 z-20 opacity-0 animate-fade-in-up animation-delay-500">
+              <div className="absolute -top-4 -right-4 z-20">
                 <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-telofy-surface border border-telofy-border shadow-xl">
                   <div className="w-8 h-8 rounded-full bg-telofy-accent/20 flex items-center justify-center">
                     <svg className="w-4 h-4 text-telofy-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -176,7 +176,7 @@ export default function HomePage() {
               </div>
 
               {/* Floating notification - bottom left */}
-              <div className="absolute -bottom-4 -left-4 z-20 opacity-0 animate-fade-in-up animation-delay-600">
+              <div className="absolute -bottom-4 -left-4 z-20">
                 <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-telofy-surface border border-amber-500/30 shadow-xl">
                   <div className="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
                     <svg className="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
