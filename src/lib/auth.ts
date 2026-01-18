@@ -21,12 +21,12 @@ export const auth = betterAuth({
     requireEmailVerification: false,
     sendVerificationEmail: async ({ user, url }: { user: { email: string }; url: string }) => {
       await resend.emails.send({
-        from: 'Telofy <noreply@telofy.ai>',
+        from: 'Goalmax <noreply@goalmax.ai>',
         to: user.email,
-        subject: 'Verify your Telofy email',
+        subject: 'Verify your Goalmax email',
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; background-color: #0a0a0b;">
-            <h1 style="color: #22c55e; font-size: 32px; margin-bottom: 24px;">Telofy</h1>
+            <h1 style="color: #22c55e; font-size: 32px; margin-bottom: 24px;">Goalmax</h1>
             <h2 style="color: #ffffff; font-size: 24px; margin-bottom: 16px;">Verify your email</h2>
             <p style="color: #a1a1aa; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
               Click the button below to verify your email address.
@@ -35,7 +35,7 @@ export const auth = betterAuth({
               Verify Email
             </a>
             <p style="color: #71717a; font-size: 14px; margin-top: 24px;">
-              If you didn't create a Telofy account, you can safely ignore this email.
+              If you didn't create a Goalmax account, you can safely ignore this email.
             </p>
           </div>
         `,
@@ -43,12 +43,12 @@ export const auth = betterAuth({
     },
     sendResetPassword: async ({ user, url }: { user: { email: string }; url: string }) => {
       await resend.emails.send({
-        from: 'Telofy <noreply@telofy.ai>',
+        from: 'Goalmax <noreply@goalmax.ai>',
         to: user.email,
-        subject: 'Reset your Telofy password',
+        subject: 'Reset your Goalmax password',
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 600px; margin: 0 auto; padding: 40px 20px;">
-            <h1 style="color: #22c55e; font-size: 32px; margin-bottom: 24px;">Telofy</h1>
+            <h1 style="color: #22c55e; font-size: 32px; margin-bottom: 24px;">Goalmax</h1>
             <h2 style="color: #ffffff; font-size: 24px; margin-bottom: 16px;">Reset your password</h2>
             <p style="color: #a1a1aa; font-size: 16px; line-height: 1.6; margin-bottom: 24px;">
               You requested to reset your password. Click the button below to set a new password.
@@ -79,11 +79,11 @@ export const auth = betterAuth({
     updateAge: 60 * 60 * 24, // 1 day
   },
   trustedOrigins: [
-    'https://telofy.ai',
+    'https://goalmax.ai',
     'http://localhost:3000',
     'http://192.168.*', // Local dev network
     'exp://*', // Expo development
-    'telofy://*', // App deep links
+    'goalmax://*', // App deep links
   ],
   advanced: {
     crossSubDomainCookies: {

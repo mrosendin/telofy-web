@@ -62,21 +62,21 @@ function ResetPasswordForm() {
   if (success) {
     return (
       <div className="text-center">
-        <div className="w-16 h-16 rounded-full bg-telofy-accent/20 flex items-center justify-center mx-auto mb-6">
-          <svg className="w-8 h-8 text-telofy-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div className="w-16 h-16 rounded-full bg-goalmax-accent/20 flex items-center justify-center mx-auto mb-6">
+          <svg className="w-8 h-8 text-goalmax-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
         <h2 className="text-2xl font-bold mb-4">Password Reset</h2>
-        <p className="text-telofy-text-secondary mb-8">
+        <p className="text-goalmax-text-secondary mb-8">
           Your password has been successfully reset.
         </p>
-        <p className="text-telofy-text-secondary mb-4">
-          Open the Telofy app to sign in with your new password.
+        <p className="text-goalmax-text-secondary mb-4">
+          Open the Goalmax app to sign in with your new password.
         </p>
         <Link
           href="/"
-          className="inline-block px-6 py-3 rounded-xl bg-telofy-surface border border-telofy-border font-medium hover:border-telofy-accent/50 transition-all"
+          className="inline-block px-6 py-3 rounded-xl bg-goalmax-surface border border-goalmax-border font-medium hover:border-goalmax-accent/50 transition-all"
         >
           Go to Homepage
         </Link>
@@ -87,7 +87,7 @@ function ResetPasswordForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <h2 className="text-2xl font-bold mb-2">Set New Password</h2>
-      <p className="text-telofy-text-secondary mb-8">
+      <p className="text-goalmax-text-secondary mb-8">
         Enter your new password below.
       </p>
 
@@ -98,10 +98,10 @@ function ResetPasswordForm() {
       )}
 
       <div className="mb-4">
-        <label className="text-telofy-text-secondary text-sm mb-2 block">New Password</label>
+        <label className="text-goalmax-text-secondary text-sm mb-2 block">New Password</label>
         <input
           type="password"
-          className="w-full text-white p-4 rounded-xl bg-telofy-surface border border-telofy-border focus:border-telofy-accent/50 outline-none transition-colors"
+          className="w-full text-white p-4 rounded-xl bg-goalmax-surface border border-goalmax-border focus:border-goalmax-accent/50 outline-none transition-colors"
           placeholder="Min 8 characters"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -111,10 +111,10 @@ function ResetPasswordForm() {
       </div>
 
       <div className="mb-6">
-        <label className="text-telofy-text-secondary text-sm mb-2 block">Confirm Password</label>
+        <label className="text-goalmax-text-secondary text-sm mb-2 block">Confirm Password</label>
         <input
           type="password"
-          className="w-full text-white p-4 rounded-xl bg-telofy-surface border border-telofy-border focus:border-telofy-accent/50 outline-none transition-colors"
+          className="w-full text-white p-4 rounded-xl bg-goalmax-surface border border-goalmax-border focus:border-goalmax-accent/50 outline-none transition-colors"
           placeholder="••••••••"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
@@ -128,8 +128,8 @@ function ResetPasswordForm() {
         disabled={isLoading || !token}
         className={`w-full rounded-xl py-4 font-semibold text-lg transition-colors ${
           isLoading || !token
-            ? 'bg-telofy-accent/50 text-telofy-bg/50 cursor-not-allowed'
-            : 'bg-telofy-accent text-telofy-bg hover:bg-telofy-accent/90'
+            ? 'bg-goalmax-accent/50 text-goalmax-bg/50 cursor-not-allowed'
+            : 'bg-goalmax-accent text-goalmax-bg hover:bg-goalmax-accent/90'
         }`}
       >
         {isLoading ? 'Resetting...' : 'Reset Password'}
@@ -140,20 +140,20 @@ function ResetPasswordForm() {
 
 export default function ResetPasswordPage() {
   return (
-    <div className="min-h-screen bg-telofy-bg flex items-center justify-center p-6">
+    <div className="min-h-screen bg-goalmax-bg flex items-center justify-center p-6">
       <div className="w-full max-w-md">
         {/* Logo */}
         <div className="text-center mb-12">
           <Link href="/" className="inline-flex items-center gap-2">
-            <Image src="/icon.png" alt="Telofy" width={40} height={40} className="rounded-lg" />
+            <Image src="/icon.png" alt="Goalmax" width={40} height={40} className="rounded-lg" />
           </Link>
-          <p className="text-telofy-accent text-4xl mt-4" style={{ fontStyle: 'italic', fontWeight: 300 }}>
-            telofy
+          <p className="text-goalmax-accent text-4xl mt-4" style={{ fontStyle: 'italic', fontWeight: 300 }}>
+            goalmax
           </p>
         </div>
 
         <Suspense fallback={
-          <div className="text-center text-telofy-text-secondary">Loading...</div>
+          <div className="text-center text-goalmax-text-secondary">Loading...</div>
         }>
           <ResetPasswordForm />
         </Suspense>

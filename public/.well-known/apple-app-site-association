@@ -3,7 +3,7 @@
     "apps": [],
     "details": [
       {
-        "appIDs": ["2WWVRA7WPN.ai.telofy.app"],
+        "appIDs": ["2WWVRA7WPN.ai.goalmax.app"],
         "paths": [
           "/reset-password/*",
           "/verify-email/*"
@@ -20,6 +20,6 @@
     ]
   },
   "webcredentials": {
-    "apps": ["2WWVRA7WPN.ai.telofy.app"]
+    "apps": ["2WWVRA7WPN.ai.goalmax.app"]
   }
 }
