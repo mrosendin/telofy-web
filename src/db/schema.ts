@@ -24,7 +24,7 @@ export const user = pgTable('user', {
   createdAt: timestamp('created_at').notNull().defaultNow(),
   updatedAt: timestamp('updated_at').notNull().defaultNow(),
   
-  // Telofy-specific fields
+  // Goalmax-specific fields
   timezone: text('timezone').default('America/Los_Angeles'),
   onboardingCompleted: boolean('onboarding_completed').default(false),
   notificationEnabled: boolean('notification_enabled').default(true),
